@@ -23,50 +23,57 @@ namespace L11.Models
 						Title = "Когда Гарри встретил Салли",
 						ReleaseDate = DateTime.Parse("1989-2-12"),
 						Genre = "романтика",
-						Price = 450.0m
+						Price = 450.0m,
+						Rating = "18+"
 					},
 					new Movie
 					{
 						Title = "Назад в будущее",
 						ReleaseDate = DateTime.Parse("1985-7-3"),
 						Genre = "фантастика",
-						Price = 500.0m
-					},
+						Price = 500.0m,
+                        Rating = "12+"
+                    },
 					new Movie
 					{
 						Title = "Назад в будущее 2",
 						ReleaseDate = DateTime.Parse("1989-11-22"),
 						Genre = "фантастика",
-						Price = 500.0m
-					},
+						Price = 500.0m,
+                        Rating = "12+"
+                    },
 					new Movie
 					{
 						Title = "Назад в будущее 3",
 						ReleaseDate = DateTime.Parse("1990-5-25"),
 						Genre = "фантастика",
-						Price = 500.0m
-					},
+						Price = 500.0m,
+                        Rating = "12+"
+                    },
 					new Movie
 					{
 						Title = "Охотники за приведениями",
 						ReleaseDate = DateTime.Parse("1984-3-13"),
 						Genre = "комедия",
-						Price = 560.0m
-					},
+						Price = 560.0m,
+                        Rating = "0+"
+                    },
 					new Movie
 					{
 						Title = "Охотники за приведениями 2",
 						ReleaseDate = DateTime.Parse("1986-2-23"),
 						Genre = "комедия",
-						Price = 560.0m
-					},
+						Price = 560.0m,
+                        Rating = "0+"
+                    },
 					new Movie
 					{
 						Title = "Роки",
 						ReleaseDate = DateTime.Parse("1976-12-3"),
 						Genre = "спортивная драма",
-						Price = 470.0m
-					}
+						Price = 470.0m,
+                        Rating = "16+"
+                    }
 					);
 				context.SaveChanges();
 			}

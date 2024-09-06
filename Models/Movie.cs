@@ -17,5 +17,8 @@ namespace L11.Models
 		public string Genre { get; set; }
 		[Display(Name = "Цена")]
 		public decimal Price { get; set; }
+
+		[Display(Name ="Возрастное ограничение")]
+		public string Rating { get; set; }
 	}
 }
