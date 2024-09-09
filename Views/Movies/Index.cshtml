@@ -15,6 +15,9 @@
         <select asp-for="MovieGenre" asp-items="Model.Genres">
             <option value="">Все</option>
         </select>
+        <select asp-for="RatingString" asp-items="Model.Ratings">
+            <option value="">Все</option>
+        </select>
         Название: <input type="text" name="searchString" />
         <input type="submit" value="Найти"/>
     </p>

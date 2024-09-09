@@ -20,11 +20,14 @@ namespace L11.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        public async Task<IActionResult> Index(string movieGenre, string ratingString, string searchString)
         {
             IQueryable<string> genreQuery = from m in _context.Movie
                                             orderby m.Genre
                                             select m.Genre;
+            IQueryable<string> ratingQuery = from m in _context.Movie
+                                             orderby m.Rating
+                                             select m.Rating;
 
             var movies = from m in _context.Movie
                          select m;
@@ -39,10 +42,16 @@ namespace L11.Controllers
                 movies = movies.Where(x => x.Genre == movieGenre);
             }
 
+            if (!string.IsNullOrEmpty(ratingString))
+            {
+                movies = movies.Where(x => x.Rating == ratingString);
+            }
+
             var movieGenreVM = new MovieGenreViewModel
             {
                 Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Movies = await movies.ToListAsync()
+                Ratings = new SelectList (await ratingQuery.Distinct().ToListAsync()),
+                Movies = await movies.ToListAsync()                
             };
 
             return View(movieGenreVM); 
