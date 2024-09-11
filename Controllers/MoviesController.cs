@@ -9,7 +9,7 @@ using L11.Data;
 using L11.Models;
 
 namespace L11.Controllers
-{
+{    
     public class MoviesController : Controller
     {
         private readonly MvcMovieContext _context;
@@ -54,7 +54,7 @@ namespace L11.Controllers
                 Movies = await movies.ToListAsync()                
             };
 
-            return View(movieGenreVM); 
+            return View(movieGenreVM); //File(filePath); PhysicalFile(filePath, "text/xml"); //Json(model);
         }
 
         [HttpPost]
@@ -108,7 +108,7 @@ namespace L11.Controllers
         {
             if (id == null || _context.Movie == null)
             {
-                return NotFound();
+                return NotFound(); //BadRequest();
             }
 
             var movie = await _context.Movie.FindAsync(id);
@@ -116,7 +116,7 @@ namespace L11.Controllers
             {
                 return NotFound();
             }
-            return View(movie);
+            return View(movie); //Ok();
         }
 
         // POST: Movies/Edit/5

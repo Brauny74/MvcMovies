@@ -36,8 +36,15 @@ namespace L11
             app.UseAuthorization();
 
             app.MapControllerRoute(
+                name: "blog",
+                pattern: "blog/{*article}",
+                defaults: new { controller = "Blog", action = "Article" }
+                );
+            //1958
+            app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");            
+
 
             app.Run();
         }

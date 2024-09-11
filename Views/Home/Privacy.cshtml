@@ -4,3 +4,16 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+<!--partial name="~/Views/_Partial.cshtml"/-->
+@*await Html.PartialAsync("~/Views/_Partial.cshtml", model)*@
+@{
+	Address a = new Address
+	{
+		City = "Moscow",
+		Street = "ul. Pushkina",
+		HouseNumber = "100"
+	};
+	ViewData["Message"] = "Lorem ipsum odor amet, consectetuer adipiscing elit. Conubia sem potenti odio scelerisque fermentum vehicula semper. Class convallis curae; dui quisque mi facilisi quisque blandit! Turpis fusce vivamus a ullamcorper consequat. Tortor inceptos velit est himenaeos; tincidunt sollicitudin nisi. Litora erat malesuada inceptos odio potenti purus. Est nisl aliquet habitasse libero suspendisse rutrum hendrerit praesent sociosqu. Parturient semper quam mauris; est per platea.";
+	await Html.RenderPartialAsync("~/Views/_Partial.cshtml", a);
+}

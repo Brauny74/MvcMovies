@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Wt3yznrP1QcdGIjJI3TnFAw2Qv4HXEcIvAAVAopwlwk=",
+  "Hash": "7MmbXGBbJk7CwYLD05n1lUGMHwvTD4+Q3FxMc64wN2w=",
   "Source": "L11",
   "BasePath": "_content/L11",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "K:\\Работа\\ТОП\\Уроки\\ASP\\PV212\\L11\\wwwroot\\img\\press.jpg",
+      "SourceId": "L11",
+      "SourceType": "Discovered",
+      "ContentRoot": "K:\\Работа\\ТОП\\Уроки\\ASP\\PV212\\L11\\wwwroot\\",
+      "BasePath": "_content/L11",
+      "RelativePath": "img/press.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\press.jpg"
     },
     {
       "Identity": "K:\\Работа\\ТОП\\Уроки\\ASP\\PV212\\L11\\wwwroot\\js\\site.js",

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "K:\\Работа\\ТОП\\Уроки\\ASP\\PV212\\L11\\wwwroot\\img\\press.jpg",
+      "PackagePath": "staticwebassets\\img\\press.jpg"
+    },
+    {
       "Id": "K:\\Работа\\ТОП\\Уроки\\ASP\\PV212\\L11\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
