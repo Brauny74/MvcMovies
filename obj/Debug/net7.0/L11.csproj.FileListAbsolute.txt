@@ -253,3 +253,4 @@ K:\Работа\ТОП\Уроки\ASP\PV212\L11\bin\Debug\net7.0\zh-Hans\Microso
 K:\Работа\ТОП\Уроки\ASP\PV212\L11\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 K:\Работа\ТОП\Уроки\ASP\PV212\L11\obj\Debug\net7.0\L11.MvcApplicationPartsAssemblyInfo.cs
 K:\Работа\ТОП\Уроки\ASP\PV212\L11\bin\Debug\net7.0\Microsoft.Docs.Samples.RouteInfo.dll
+K:\Работа\ТОП\Уроки\ASP\PV212\L11\bin\Debug\net7.0\samplewebsettings.json

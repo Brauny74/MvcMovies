@@ -10,8 +10,15 @@ namespace L11
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Configuration.AddJsonFile(
+                "samplewebsettings.json",
+                optional: false,
+                reloadOnChange: true
+                );
+
             // Add services to the container.
             builder.Services.AddSingleton<IDateTime, SystemDateTime>();
+            builder.Services.Configure<SampleWebSettings>(builder.Configuration);
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<MvcMovieContext>(options => 
             options.UseSqlServer(builder.Configuration.GetConnectionString("MvcMovieContext")));
@@ -54,7 +61,7 @@ namespace L11
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");            
 
-
+            
             app.Run();
         }
     }

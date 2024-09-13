@@ -28,5 +28,10 @@ namespace L11.Controllers
 
 			return View();
 		}
+
+		public IActionResult Time([FromServices] IDateTime dt)
+		{
+			return Content($"Current server time: {dt.Now.ToShortTimeString()}");
+		}
 	}
 }
