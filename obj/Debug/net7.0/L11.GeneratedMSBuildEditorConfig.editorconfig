@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = K:\Работа\ТОП\Уроки\ASP\PV212\L11
 build_property._RazorSourceGeneratorDebug = 
 
+[K:/Работа/ТОП/Уроки/ASP/PV212/L11/Views/CurrentTime/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmVudFRpbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [K:/Работа/ТОП/Уроки/ASP/PV212/L11/Views/HelloWorld/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

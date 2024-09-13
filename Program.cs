@@ -11,6 +11,7 @@ namespace L11
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSingleton<IDateTime, SystemDateTime>();
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<MvcMovieContext>(options => 
             options.UseSqlServer(builder.Configuration.GetConnectionString("MvcMovieContext")));
@@ -35,12 +36,20 @@ namespace L11
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
+            /*app.UseEndpoints(endpoints => {
+                endpoints.MapControllers();
+            });*/
+
+            app.MapAreaControllerRoute("blog_route", "Blog",
+					"Manage/{controller}/{action}/{id?}"
+					);
+            //Manage/Users/AddUser
+            //{ area = Blog, controller = Users, action = AddUser }
+			app.MapControllerRoute(
                 name: "blog",
                 pattern: "blog/{*article}",
                 defaults: new { controller = "Blog", action = "Article" }
                 );
-            //1958
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");            
