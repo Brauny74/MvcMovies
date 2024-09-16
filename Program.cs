@@ -1,5 +1,6 @@
 using L11.Data;
 using L11.Models;
+using L11.Models.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace L11
@@ -18,6 +19,9 @@ namespace L11
 
             // Add services to the container.
             builder.Services.AddSingleton<IDateTime, SystemDateTime>();
+            builder.Services.AddSingleton<ProfileOptionsService>();
+            builder.Services.AddTransient<IToDoRepository, ToDoRepository>();
+            builder.Services.AddTransient<ToDoStatisticsService>();
             builder.Services.Configure<SampleWebSettings>(builder.Configuration);
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<MvcMovieContext>(options => 

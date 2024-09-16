@@ -1,0 +1,28 @@
+﻿@using L11.Models;
+@inject ToDoStatisticsService Stats
+
+@{
+	ViewData["Title"] = "To Do";
+}
+<h1>To Do Items</h1>
+<ul>
+	<li>Total Items; @Stats.GetCount()</li>
+	<li>Completed: @Stats.GetCountDone()</li>
+	<li>Avg. Priority: @Stats.GetAverage()</li>
+</ul>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Priority</th>
+		<th>Done?</th>
+	</tr>
+	@for(int i = 0; i < Stats.GetCount(); i++)
+	{
+		var item = Stats.GetByIndex(i); 
+		<tr>
+			<td>@item.Title</td>
+			<td>@item.Priority</td>
+			<td>@item.IsDone</td>
+		</tr>
+	}
+</table>

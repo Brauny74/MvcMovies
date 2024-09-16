@@ -19,5 +19,10 @@ namespace L11.Controllers
 			ViewData["Updates"] = _settings.Updates;
 			return View();
 		}
+
+		public IActionResult Stats()
+		{
+			return View();
+		}
 	}
 }

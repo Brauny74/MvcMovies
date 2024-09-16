@@ -1,0 +1,26 @@
+﻿@model Profile
+@using System.Threading.Tasks
+@using L11.Models
+@using L11.Models.Services
+@inject ProfileOptionsService Options
+
+@{
+	ViewData["Title"] = $"Профиль {Model.Name}";
+}
+
+<h1>Настройки Профиля</h1>
+<form>
+	Имя: @Html.TextBoxFor(m => m.Name)
+	<br/>
+	Пол: @Html.DropDownList("Gender", Options.ListGenders().Select(
+		g => new SelectListItem() {Text = g, Value = g}
+	));
+	<br/>
+	Регион: @Html.DropDownListFor(m => m.Oblast.Number, 
+	Options.ListOblasts().Select(s => new SelectListItem(){
+		Text = s.Name, Value = s.Number.ToString()
+	}))
+	<br/>
+	Любимый жанр: @Html.DropDownList("FavGenre",
+	Options.ListGenres().Select(g => new SelectListItem{Text = g, Value = g}))
+</form>
